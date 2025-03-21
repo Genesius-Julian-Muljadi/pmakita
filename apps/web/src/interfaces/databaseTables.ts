@@ -1,19 +1,14 @@
-interface Testimonial {
-  testifier?: string;
-  testimony: string;
-  dateCreated: Date;
-}
-
 interface Product {
   id: number;
   image: string;
-  promoted?: boolean;
   name: string;
-  type: number;
-  overview?: string;
-  desc?: string;
+  stock: number;
+  location: string;
+  price: number;
+  rating: number;
   dateCreated: Date;
   updated: Date;
+  // Fill in the rest according to database
 }
 
-export type { Testimonial, Product };
+export type { Product };

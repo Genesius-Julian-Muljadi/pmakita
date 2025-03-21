@@ -26,28 +26,19 @@ const config: Config = withMT({
       },
       fontFamily: {
         sans: ["var(--font-space-grotesk)", ...fontFamily.sans],
+        // mono: []
       },
       colors: {
-        primary: colors.amber,
-        // backtheme: colors.sky,
-        gray: colors.gray,
-        backtheme: {
-          "50": "#fff7f0",
-          "100": "#f5e4d3",
-          "200": "#f2d3b3",
-          "300": "#edc39f",
-          "400": "#db9960",
-          "500": "#c27e44",
-          "600": "#945b29",
-          "700": "#73441a",
-          "800": "#522f10",
-          "900": "#301b08",
-          "950": "#1f1105",
+        header: { main: "#019444", search: "#f3f8fb" },
+        home: {
+          popularCard: "#f3f8fb",
+          carouselArrowBg: "#f2f3f5",
+          discountBadge: "#e36362",
+          ratingStar: "#ffb949",
+          salesProgressBar: "#1287a4",
+          addToCardBg: "#009443",
         },
-        productCard: {
-          light: "#fffcf6",
-          dark: "#111827",
-        },
+        footer: { main: "#ededed" },
       },
       zIndex: {
         60: "60",

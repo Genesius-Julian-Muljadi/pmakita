@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import { Footer, Layout } from "@/components";
 import siteMetadata from "@/data/siteMetadata";
-import HeaderServer from "@/components/HeaderServer";
+import Header from "@/components/header";
 
 const roboto = Roboto({
   subsets: ["latin"],
@@ -34,11 +34,11 @@ export default function RootLayout({
         <link rel="shortcut icon" href="/favicon.png" type="image/png" />
       </head>
       <body className={roboto.className}>
-          <Layout>
-            <HeaderServer />
-            <div className="-mt-16">{children}</div>
-            <Footer />
-          </Layout>
+        <Layout>
+          <Header />
+          <div className="mt-6 mx-2 md:mx-4 xl:mx-6">{children}</div>
+          <Footer />
+        </Layout>
       </body>
     </html>
   );

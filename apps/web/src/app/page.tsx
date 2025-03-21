@@ -1,13 +1,19 @@
-import Hero from "./hero";
+import Popular from "@/components/landingPage/popular";
+import Hero from "../components/landingPage/hero";
 import axios from "axios";
 
 export default async function Home() {
-  let testimonials = undefined;
+  let products = undefined;
   try {
-    const testimonialsRaw = await axios.get(
-      process.env.NEXT_PUBLIC_BASE_API_URL + "/data/testimonials"
+    const API: string = String(process.env.NEXT_PUBLIC_BASE_API_URL);
+    const productData = await axios.get(
+      API
+      // + API routes
     );
-    testimonials = testimonialsRaw.data.data;
+
+    if (!productData) throw new Error();
+
+    products = productData.data.data;
   } catch (err) {
     console.log(err);
   }
@@ -15,6 +21,7 @@ export default async function Home() {
   return (
     <>
       <Hero />
+      <Popular products={products} />
     </>
   );
 }
