@@ -2,12 +2,10 @@
 
 import siteMetadata from "@/data/siteMetadata";
 import headerData from "@/data/headerData";
-import headerNavLinks from "@/data/headerNavLinks";
 import Link from "@/components/Link";
 import { useEffect, useState } from "react";
 import { useCookies } from "react-cookie";
 import { AccessTokenUser } from "@/interfaces/accesstokens";
-import headerNavLinksLoggedIn from "@/data/headerNavLinksLoggedIn";
 import { Provider, useSelector } from "react-redux";
 import { store } from "@/redux/store";
 import Image from "next/image";
@@ -18,23 +16,8 @@ import { Button } from "@material-tailwind/react";
 
 function Header({ token }: { token: AccessTokenUser | null }) {
   // const [cookies, setCookie, removeCookie] = useCookies(["access_token"]);
-  const [navLinks, setNavLinks] = useState(
-    token ? headerNavLinksLoggedIn : headerNavLinks
-  );
   const searchParams = useSearchParams();
   const query: string = searchParams.get("category") || "";
-
-  const activeLinks = useSelector(
-    (state: {
-      UHLSlice: { headerLinks: Array<{ href: string; title: string }> | null };
-    }) => state.UHLSlice.headerLinks
-  );
-
-  useEffect(() => {
-    if (activeLinks) {
-      setNavLinks(activeLinks);
-    }
-  }, [activeLinks]);
 
   try {
     return (

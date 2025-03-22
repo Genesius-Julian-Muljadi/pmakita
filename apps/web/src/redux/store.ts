@@ -5,7 +5,6 @@ import TEPSlice from "./slices/toggleEditProduct";
 import TEMPSlice from "./slices/toggleEditMainProduct";
 import UCSlice from "./slices/updateCookie";
 import UDPSlice from "./slices/updateDashboardProduct";
-import UHLSlice from "./slices/updateHeaderLinks";
 import PDPSlice from "./slices/promoteDemoteProduct";
 
 export const store = configureStore({
@@ -16,7 +15,6 @@ export const store = configureStore({
     TEMPSlice,
     UCSlice,
     UDPSlice,
-    UHLSlice,
     PDPSlice,
   },
 });

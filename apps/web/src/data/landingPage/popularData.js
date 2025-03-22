@@ -5,6 +5,8 @@ const popularData = {
   sideLinkID: "Lihat Semua",
   sideLinkEN: "See All",
   sideLinkHref: "",
+  stockID: "Item",
+  stockEN: "Items",
 };
 
 module.exports = popularData;

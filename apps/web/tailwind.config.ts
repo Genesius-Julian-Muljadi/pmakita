@@ -37,6 +37,7 @@ const config: Config = withMT({
           ratingStar: "#ffb949",
           salesProgressBar: "#1287a4",
           addToCardBg: "#009443",
+          stockText: "#a8acad",
         },
         footer: { main: "#ededed" },
       },

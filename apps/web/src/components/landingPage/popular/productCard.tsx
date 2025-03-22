@@ -11,14 +11,15 @@ import {
 import React from "react";
 import noImages from "@/assets/noImage";
 import Image from "next/image";
+import popularData from "@/data/landingPage/popularData";
 
 export function ProductCard({ product }: { product: Product }) {
   return (
-    <Card className="w-40 h-48 border border-red-500 mx-auto bg-productCard-light dark:bg-productCard-dark dark:shadow-gray-800">
+    <Card className="w-40 h-52 mx-auto bg-home-popularCard">
       <CardHeader
         shadow={false}
         floated={false}
-        className="m-auto w-full rounded-b-none"
+        className="m-auto w-full rounded-b-none mt-6"
       >
         {noImages.includes(product.image) ? (
           <Image
@@ -42,30 +43,23 @@ export function ProductCard({ product }: { product: Product }) {
           />
         )}
       </CardHeader>
-      <CardBody>
-        <div className="mb-2 flex items-center justify-between">
-          {/* <Typography
-            color="blue-gray"
+      <CardBody className="pt-4 pb-0 mb-6">
+        <div className="flex flex-col">
+          <Typography
+            color="black"
             aria-label={product.name}
-            className="font-extrabold dark:text-blue-gray-50 uppercase"
+            className="font-normal font-sans normal-case mx-auto"
           >
             {product.name}
           </Typography>
           <Typography
-            color="blue-gray"
-            aria-label={Intl.DateTimeFormat(siteMetadata.locale, {
-              year: "numeric",
-              month: "short",
-              day: "numeric",
-            }).format(new Date(product.dateCreated))}
-            className="font-semibold dark:text-blue-gray-50"
+            color="black"
+            aria-label={product.stock.toString()} 
+            className="font-normal font-sans normal-case mx-auto text-base text-home-stockText"
           >
-            {Intl.DateTimeFormat(siteMetadata.locale, {
-              year: "numeric",
-              month: "short",
-              day: "numeric",
-            }).format(new Date(product.dateCreated))}
-          </Typography> */}
+            <span>
+            {product.stock} {siteMetadata.locale === "id-ID" ? popularData.stockID : popularData.stockEN}</span>
+          </Typography>
         </div>
       </CardBody>
     </Card>
