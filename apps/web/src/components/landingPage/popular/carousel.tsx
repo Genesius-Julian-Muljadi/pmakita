@@ -2,10 +2,9 @@
 
 import { Product } from "@/interfaces/databaseTables";
 import {
-  Button,
+  Card,
   Carousel,
   IconButton,
-  Typography,
 } from "@material-tailwind/react";
 import { ProductCard } from "./productCard";
 import Paginate from "@/functions/paginate";
@@ -17,9 +16,9 @@ export default function PopularCarousel({
 }: {
   products: Array<Product>;
 }) {
-  const paginatedProducts: Array<Array<Array<Product>>> =
+  const paginatedProducts: Array<Array<Array<Product | null>>> =
     PAGINATION_PAGESIZES.map((pageSize: number) => {
-      return Paginate(products, pageSize);
+      return Paginate(products, pageSize, null);
     });
   const carouselClasses: Array<string> = [
     "flex sm:hidden",
@@ -33,7 +32,7 @@ export default function PopularCarousel({
   return (
     <div>
       {paginatedProducts.map(
-        (productCarousel: Array<Array<Product>>, widthIndex: number) => (
+        (productCarousel: Array<Array<Product | null>>, widthIndex: number) => (
           <Carousel
             key={"home-popular-carousel-" + widthIndex}
             className={carouselClasses[widthIndex]}
@@ -86,22 +85,34 @@ export default function PopularCarousel({
                 </svg>
               </IconButton>
             )}
-            navigation={({ setActiveIndex, activeIndex, length }) => null}
+            navigation={() => null}
           >
             {productCarousel.map(
-              (productPage: Array<Product>, page: number) => (
+              (productPage: Array<Product | null>, page: number) => (
                 <div
                   key={"home-popular-carousel-" + widthIndex + "-page-" + page}
-                  className={`mx-16 sm:mx-20 grid grid-cols-${PAGINATION_PAGESIZES[widthIndex]} grid-rows-1 gap-2 lg:gap-4 justify-start`}
+                  className={`mx-16 sm:mx-20 grid`}
                 >
-                  {productPage.map((product: Product, index: number) => (
-                    <div
-                      key={`home-popular-carousel-${widthIndex}-page-${page}-product-${index}`}
-                      className={`col-start-${index + 1} row-start-1`}
-                    >
-                      <ProductCard product={product} />
-                    </div>
-                  ))}
+                  <div
+                    className={`grid grid-cols-${PAGINATION_PAGESIZES[widthIndex]} grid-rows-1 justify-between`}
+                  >
+                    {productPage.map(
+                      (product: Product | null, index: number) => (
+                        <div
+                          key={`home-popular-carousel-${widthIndex}-page-${page}-product-${index}`}
+                          className={`col-start-${index + 1} row-start-1`}
+                        >
+                          {product ? (
+                            <ProductCard product={product} />
+                          ) : (
+                            <Card className="w-40 h-52 mx-auto bg-transparent shadow-none">
+                              {null}
+                            </Card>
+                          )}
+                        </div>
+                      )
+                    )}
+                  </div>
                 </div>
               )
             )}
