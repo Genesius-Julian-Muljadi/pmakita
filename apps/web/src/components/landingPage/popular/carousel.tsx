@@ -1,11 +1,7 @@
 "use client";
 
 import { Product } from "@/interfaces/databaseTables";
-import {
-  Card,
-  Carousel,
-  IconButton,
-} from "@material-tailwind/react";
+import { Card, Carousel, IconButton } from "@material-tailwind/react";
 import { ProductCard } from "./productCard";
 import Paginate from "@/functions/paginate";
 
@@ -102,13 +98,7 @@ export default function PopularCarousel({
                           key={`home-popular-carousel-${widthIndex}-page-${page}-product-${index}`}
                           className={`col-start-${index + 1} row-start-1`}
                         >
-                          {product ? (
-                            <ProductCard product={product} />
-                          ) : (
-                            <Card className="w-40 h-52 mx-auto bg-transparent shadow-none">
-                              {null}
-                            </Card>
-                          )}
+                          <ProductCard product={product} />
                         </div>
                       )
                     )}
