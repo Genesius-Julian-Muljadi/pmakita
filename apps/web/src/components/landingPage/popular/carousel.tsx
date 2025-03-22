@@ -1,7 +1,7 @@
 "use client";
 
 import { Product } from "@/interfaces/databaseTables";
-import { Card, Carousel, IconButton } from "@material-tailwind/react";
+import { Carousel, IconButton } from "@material-tailwind/react";
 import { ProductCard } from "./productCard";
 import Paginate from "@/functions/paginate";
 

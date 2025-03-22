@@ -3,9 +3,6 @@ import popularData from "@/data/landingPage/popularData";
 import { Product } from "@/interfaces/databaseTables";
 import Link from "@/components/Link";
 import { ChevronRightIcon } from "@heroicons/react/24/outline";
-import { Button, Carousel, Typography } from "@material-tailwind/react";
-import Image from "next/image";
-import noImages from "@/assets/noImage";
 import PopularCarousel from "./carousel";
 import { ProductSamples } from "@/data/samples/productSamples";
 

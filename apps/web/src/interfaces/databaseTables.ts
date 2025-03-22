@@ -3,6 +3,10 @@ interface Product {
   image: string;
   name: string;
   stock: number;
+  popular?: boolean;
+  fresh?: boolean;
+  unit: string;
+  unitEN?: string;
   location: string;
   price: number;
   rating: number;
