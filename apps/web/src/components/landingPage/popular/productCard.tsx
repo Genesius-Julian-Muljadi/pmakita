@@ -22,11 +22,11 @@ export function ProductCard({ product }: { product: Product | null }) {
     );
   } else {
     return (
-      <Card className="w-40 h-52 mx-auto bg-home-popularCard">
+      <Card className="w-40 h-52 mx-auto bg-home-popularCard shadow-none rounded-2xl">
         <CardHeader
           shadow={false}
           floated={false}
-          className="m-auto w-full rounded-b-none mt-6"
+          className="rounded-none mt-6 mx-3 w-auto"
         >
           {noImages.includes(product.image) ? (
             <Image

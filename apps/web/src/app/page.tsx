@@ -1,6 +1,7 @@
 import Popular from "@/components/landingPage/popular";
 import Hero from "../components/landingPage/hero";
 import axios from "axios";
+import Fresh from "@/components/landingPage/fresh";
 
 export default async function Home() {
   let products = undefined;
@@ -19,9 +20,10 @@ export default async function Home() {
   }
 
   return (
-    <>
+    <div className="flex flex-col gap-10">
       <Hero />
       <Popular products={products} />
-    </>
+      <Fresh products={products} />
+    </div>
   );
 }

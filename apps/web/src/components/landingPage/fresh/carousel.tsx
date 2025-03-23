@@ -5,9 +5,9 @@ import { Carousel, IconButton } from "@material-tailwind/react";
 import { ProductCard } from "./productCard";
 import Paginate from "@/functions/paginate";
 
-const PAGINATION_PAGESIZES: Array<number> = [2, 2, 3, 4, 5, 7]; // Page sizes for screen widths xs, sm, md, lg, xl, 2xl
+const PAGINATION_PAGESIZES: Array<number> = [1, 1, 2, 3, 4, 5]; // Page sizes for screen widths xs, sm, md, lg, xl, 2xl
 
-export default function PopularCarousel({
+export default function FreshCarousel({
   products,
 }: {
   products: Array<Product>;
@@ -26,7 +26,7 @@ export default function PopularCarousel({
   ];
 
   return (
-    <div id="home-popular-carousel">
+    <div id="home-fresh-carousel">
       {paginatedProducts.map(
         (productCarousel: Array<Array<Product | null>>, widthIndex: number) => (
           <Carousel

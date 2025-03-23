@@ -32,7 +32,7 @@ function Header({ token }: { token: AccessTokenUser | null }) {
             id="header-logo"
           >
             <Image
-              src={headerData.logo || noImages[0]}
+              src={headerData.logo || noImages[1]}
               width={headerData.logoWidth || 96}
               height={headerData.logoHeight || 144}
               alt={headerData.logoAlt}

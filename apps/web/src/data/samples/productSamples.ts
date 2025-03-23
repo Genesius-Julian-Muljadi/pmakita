@@ -54,7 +54,7 @@ const ProductSamples: Array<Product> = [
     unit: "1 kg / utuh",
     unitEN: "1 kg / whole",
     location: "literally anywhere else",
-    price: 7777777,
+    price: 332000,
     rating: 4,
     dateCreated: new Date("2024-03-13T09:18:14.000Z"),
     updated: new Date("2025-02-07T09:18:14.000Z"),
@@ -146,7 +146,7 @@ const ProductSamples: Array<Product> = [
   {
     id: 11,
     image: noImages[1],
-    name: "Sample_10",
+    name: "Sample_11",
     stock: 27,
     popular: true,
     fresh: true,
@@ -160,7 +160,7 @@ const ProductSamples: Array<Product> = [
   {
     id: 12,
     image: noImages[1],
-    name: "Sample_10",
+    name: "Sample_12",
     stock: 2,
     popular: true,
     fresh: true,

@@ -2,6 +2,7 @@ interface Product {
   id: number;
   image: string;
   name: string;
+  nameEN?: string;
   stock: number;
   popular?: boolean;
   fresh?: boolean;

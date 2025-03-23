@@ -36,7 +36,7 @@ export default function RootLayout({
       <body className={roboto.className}>
         <Layout>
           <Header />
-          <div className="mt-6 mx-2">{children}</div>
+          <div className="mt-6 mx-2 lg:mx-4 xl:mx-6">{children}</div>
           <Footer />
         </Layout>
       </body>
