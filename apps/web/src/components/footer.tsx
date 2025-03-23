@@ -1,11 +1,9 @@
 "use client";
+
 import Image from "next/image";
-import { Typography, IconButton, Button } from "@material-tailwind/react";
+import { Typography, IconButton } from "@material-tailwind/react";
 import siteMetadata from "@/data/siteMetadata";
 import Link from "next/link";
-
-// const LINKS = ["About Us", "Careers", "Press", "Blog", "Pricing"];
-// const CURRENT_YEAR = new Date().getFullYear();
 
 export function Footer() {
   return (
