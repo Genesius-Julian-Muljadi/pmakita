@@ -29,7 +29,10 @@ const config: Config = withMT({
         // mono: []
       },
       colors: {
-        header: { main: "#019444", search: "#f3f8fb" },
+        header: {
+          main: "#019444",
+          search: { bg: "#f3f8fb", placeholder: "#747579" },
+        },
         home: {
           popularCard: "#f3f8fb",
           carouselArrowBg: "#f2f3f5",
