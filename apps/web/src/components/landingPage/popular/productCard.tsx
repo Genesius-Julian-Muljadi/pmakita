@@ -33,8 +33,16 @@ export function ProductCard({ product }: { product: Product | null }) {
               src={noImages[0]}
               width={70}
               height={90}
-              alt={product.name}
-              aria-label={product.name}
+              alt={
+                siteMetadata.locale === "id-ID" || !product.nameEN
+                  ? product.nameID
+                  : product.nameEN
+              }
+              aria-label={
+                siteMetadata.locale === "id-ID" || !product.nameEN
+                  ? product.nameID
+                  : product.nameEN
+              }
               className="h-full w-full object-cover"
               priority
             />
@@ -43,8 +51,16 @@ export function ProductCard({ product }: { product: Product | null }) {
               src={product.image}
               width={70}
               height={90}
-              alt={product.name}
-              aria-label={product.name}
+              alt={
+                siteMetadata.locale === "id-ID" || !product.nameEN
+                  ? product.nameID
+                  : product.nameEN
+              }
+              aria-label={
+                siteMetadata.locale === "id-ID" || !product.nameEN
+                  ? product.nameID
+                  : product.nameEN
+              }
               className="h-full w-full object-cover"
               priority
             />
@@ -54,10 +70,16 @@ export function ProductCard({ product }: { product: Product | null }) {
           <div className="flex flex-col">
             <Typography
               color="black"
-              aria-label={product.name}
+              aria-label={
+                siteMetadata.locale === "id-ID" || !product.nameEN
+                  ? product.nameID
+                  : product.nameEN
+              }
               className="font-normal font-sans normal-case mx-auto"
             >
-              {product.name}
+              {siteMetadata.locale === "id-ID" || !product.nameEN
+                ? product.nameID
+                : product.nameEN}
             </Typography>
             <Typography
               color="black"

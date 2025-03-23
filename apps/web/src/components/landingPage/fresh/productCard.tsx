@@ -35,8 +35,16 @@ export function ProductCard({ product }: { product: Product | null }) {
               src={noImages[2]}
               width={70}
               height={90}
-              alt={product.name}
-              aria-label={product.name}
+              alt={
+                siteMetadata.locale === "id-ID" || !product.nameEN
+                  ? product.nameID
+                  : product.nameEN
+              }
+              aria-label={
+                siteMetadata.locale === "id-ID" || !product.nameEN
+                  ? product.nameID
+                  : product.nameEN
+              }
               className="h-full w-full object-cover"
               priority
             />
@@ -45,8 +53,16 @@ export function ProductCard({ product }: { product: Product | null }) {
               src={product.image}
               width={70}
               height={90}
-              alt={product.name}
-              aria-label={product.name}
+              alt={
+                siteMetadata.locale === "id-ID" || !product.nameEN
+                  ? product.nameID
+                  : product.nameEN
+              }
+              aria-label={
+                siteMetadata.locale === "id-ID" || !product.nameEN
+                  ? product.nameID
+                  : product.nameEN
+              }
               className="h-full w-full object-cover"
               priority
             />
@@ -57,20 +73,28 @@ export function ProductCard({ product }: { product: Product | null }) {
             <div className="flex flex-col gap-0">
               <Typography
                 color="black"
-                aria-label={product.name}
+                aria-label={
+                  siteMetadata.locale === "id-ID" || !product.nameEN
+                    ? product.nameID
+                    : product.nameEN
+                }
                 className="font-normal font-sans normal-case"
               >
                 {siteMetadata.locale === "id-ID" || !product.nameEN
-                  ? product.name
+                  ? product.nameID
                   : product.nameEN}
               </Typography>
               <Typography
                 color="black"
-                aria-label={product.unit}
+                aria-label={
+                  siteMetadata.locale === "id-ID" || !product.unitEN
+                    ? product.unitID
+                    : product.unitEN
+                }
                 className="font-normal font-sans normal-case"
               >
                 {siteMetadata.locale === "id-ID" || !product.unitEN
-                  ? product.unit
+                  ? product.unitID
                   : product.unitEN}
               </Typography>
             </div>
@@ -112,10 +136,7 @@ export function ProductCard({ product }: { product: Product | null }) {
                   </svg>
                 }
               />
-              <Typography
-                aria-label={product.name}
-                className="font-normal font-sans normal-case my-auto text-sm text-home-rating-value -translate-x-4"
-              >
+              <Typography className="font-normal font-sans normal-case my-auto text-sm text-home-rating-value -translate-x-4">
                 <span>{`(${product.rating})`}</span>
               </Typography>
             </div>

@@ -1,12 +1,12 @@
 interface Product {
   id: number;
   image: string;
-  name: string;
+  nameID: string;
   nameEN?: string;
   stock: number;
   popular?: boolean;
   fresh?: boolean;
-  unit: string;
+  unitID: string;
   unitEN?: string;
   location: string;
   price: number;
