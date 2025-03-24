@@ -44,7 +44,13 @@ const config: Config = withMT({
           freshAddToCardBG: "#cbeada",
           addToCardBg: "#009443",
         },
-        footer: { main: "#ededed" },
+        footer: {
+          bg: "#f7f7f7",
+          hl: "#d4d4d4",
+          copyright: "#9a9a9a",
+          li: "#202020",
+          gap: "#029247",
+        },
       },
       zIndex: {
         60: "60",
