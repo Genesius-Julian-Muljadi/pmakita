@@ -25,7 +25,7 @@ export function ProductCard({ product }: { product: Product | null }) {
     );
   } else {
     return (
-      <Badge>
+      <Badge placement="top-start">
         <Card className="w-56 h-[24.3rem] mx-auto bg-white shadow-none border border-home-freshCardBorder rounded-2xl">
           <CardHeader
             shadow={false}
