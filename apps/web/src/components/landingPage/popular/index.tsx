@@ -17,7 +17,7 @@ export default function Popular({ products }: { products?: Array<Product> }) {
         className="flex flex-row justify-between mx-2 md:mx-4 lg:mx-6 xl:mx-8 border-b border-footer-main"
         id="home-popular-header"
       >
-        <div className="text-2xl font-bold font-sans my-auto border-b-2 border-header-main py-4 pr-12 sm:pr-16 md:pr-24 translate-y-[0.1rem]">
+        <div className="w-72 text-2xl font-bold font-sans my-auto border-b-2 border-header-main py-4 translate-y-[0.1rem]">
           {siteMetadata.locale === "id-ID"
             ? popularData.headerTitleID
             : popularData.headerTitleEN}
