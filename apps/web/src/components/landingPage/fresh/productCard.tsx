@@ -17,17 +17,30 @@ import freshData from "@/data/landingPage/freshData";
 export function ProductCard({ product }: { product: Product | null }) {
   if (!product) {
     return (
-      <Card className="w-56 h-[19rem] mx-auto bg-transparent shadow-none">
+      <Card
+        className="w-56 h-[19rem] mx-auto bg-transparent shadow-none"
+        placeholder={undefined}
+        onPointerEnterCapture={undefined}
+        onPointerLeaveCapture={undefined}
+      >
         {null}
       </Card>
     );
   } else {
     return (
-      <Card className="w-56 h-[19rem] mx-auto bg-white shadow-none border border-home-freshCardBorder rounded-2xl">
+      <Card
+        className="w-56 h-[19rem] mx-auto bg-white shadow-none border border-home-freshCardBorder rounded-2xl"
+        placeholder={undefined}
+        onPointerEnterCapture={undefined}
+        onPointerLeaveCapture={undefined}
+      >
         <CardHeader
           shadow={false}
           floated={false}
           className="rounded-none mt-5 mx-3 w-auto"
+          placeholder={undefined}
+          onPointerEnterCapture={undefined}
+          onPointerLeaveCapture={undefined}
         >
           {noImages.includes(product.image) ? (
             <Image
@@ -67,7 +80,12 @@ export function ProductCard({ product }: { product: Product | null }) {
             />
           )}
         </CardHeader>
-        <CardBody className="pt-2 pb-0 px-3 mb-auto">
+        <CardBody
+          className="pt-2 pb-0 px-3 mb-auto"
+          placeholder={undefined}
+          onPointerEnterCapture={undefined}
+          onPointerLeaveCapture={undefined}
+        >
           <div className="flex flex-col gap-2 justify-start">
             <div className="flex flex-col gap-0">
               <span
@@ -134,6 +152,9 @@ export function ProductCard({ product }: { product: Product | null }) {
                     />
                   </svg>
                 }
+                placeholder={undefined}
+                onPointerEnterCapture={undefined}
+                onPointerLeaveCapture={undefined}
               />
               <span className="font-normal font-sans normal-case my-auto text-sm text-home-rating-value -translate-x-4">
                 <span>{`(${product.rating})`}</span>
@@ -154,6 +175,9 @@ export function ProductCard({ product }: { product: Product | null }) {
               <Button
                 onClick={() => freshData.addAction(product)}
                 className="flex flex-row justify-between w-[5.5rem] bg-home-freshAddToCardBG py-1 px-2 rounded-sm shadow-none hover:shadow-none"
+                placeholder={undefined}
+                onPointerEnterCapture={undefined}
+                onPointerLeaveCapture={undefined}
               >
                 <freshData.addIcon className="text-black size-[0.85rem] my-auto" />
                 <span className="my-auto text-nowrap font-mono normal-case text-sm font-medium text-black">

@@ -3,10 +3,9 @@
 import siteMetadata from "@/data/siteMetadata";
 import headerData from "@/data/headerData";
 import Link from "@/components/Link";
-import { useEffect, useState } from "react";
 import { useCookies } from "react-cookie";
 import { AccessTokenUser } from "@/interfaces/accesstokens";
-import { Provider, useSelector } from "react-redux";
+import { Provider } from "react-redux";
 import { store } from "@/redux/store";
 import Image from "next/image";
 import noImages from "@/assets/noImage";
@@ -68,6 +67,9 @@ function Header({ token }: { token: AccessTokenUser | null }) {
             <Button
               size="sm"
               className="normal-case font-extrabold font-sans outline outline-header-main bg-white text-header-main hover:bg-header-main hover:text-white hover:outline-white"
+              placeholder={undefined}
+              onPointerEnterCapture={undefined}
+              onPointerLeaveCapture={undefined}
             >
               {siteMetadata.locale === "id-ID"
                 ? headerData.loginButtonID
@@ -76,6 +78,9 @@ function Header({ token }: { token: AccessTokenUser | null }) {
             <Button
               size="sm"
               className="normal-case font-extrabold font-sans outline outline-white bg-header-main text-white hover:bg-white hover:text-header-main hover:outline-header-main"
+              placeholder={undefined}
+              onPointerEnterCapture={undefined}
+              onPointerLeaveCapture={undefined}
             >
               {siteMetadata.locale === "id-ID"
                 ? headerData.signupButtonID

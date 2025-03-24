@@ -40,6 +40,9 @@ export default function FreshCarousel({
                 onClick={handlePrev}
                 ripple
                 className="!absolute top-2/4 left-2 -translate-y-2/4 bg-home-carouselArrowBg rounded-full hover:bg-home-carouselArrowBg/70"
+                placeholder={undefined}
+                onPointerEnterCapture={undefined}
+                onPointerLeaveCapture={undefined}
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -64,6 +67,9 @@ export default function FreshCarousel({
                 size="lg"
                 onClick={handleNext}
                 className="!absolute top-2/4 !right-2 -translate-y-2/4 bg-home-carouselArrowBg rounded-full hover:bg-home-carouselArrowBg/70"
+                placeholder={undefined}
+                onPointerEnterCapture={undefined}
+                onPointerLeaveCapture={undefined}
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -82,6 +88,9 @@ export default function FreshCarousel({
               </IconButton>
             )}
             navigation={() => null}
+            placeholder={undefined}
+            onPointerEnterCapture={undefined}
+            onPointerLeaveCapture={undefined}
           >
             {productCarousel.map(
               (productPage: Array<Product | null>, page: number) => (
