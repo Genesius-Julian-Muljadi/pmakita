@@ -4,6 +4,8 @@ import { Product } from "@/interfaces/databaseTables";
 import { Carousel, IconButton } from "@material-tailwind/react";
 import { ProductCard } from "./productCard";
 import Paginate from "@/functions/paginate";
+import siteMetadata from "@/data/siteMetadata";
+import discountsData from "@/data/landingPage/discountsData";
 
 const PAGINATION_PAGESIZES: Array<number> = [1, 1, 2, 3, 4, 5]; // Page sizes for screen widths xs, sm, md, lg, xl, 2xl
 
@@ -26,11 +28,11 @@ export default function DiscountCarousel({
   ];
 
   return (
-    <div id="home-fresh-carousel">
+    <div id="home-discounts-carousel">
       {paginatedProducts.map(
         (productCarousel: Array<Array<Product | null>>, widthIndex: number) => (
           <Carousel
-            key={"home-popular-carousel-" + widthIndex}
+            key={"home-discounts-carousel-" + widthIndex}
             className={carouselClasses[widthIndex]}
             prevArrow={({ handlePrev }) => (
               <IconButton
@@ -39,6 +41,11 @@ export default function DiscountCarousel({
                 size="lg"
                 onClick={handlePrev}
                 ripple
+                aria-label={
+                  siteMetadata.locale === "id-ID"
+                    ? discountsData.leftLabelID
+                    : discountsData.leftLabelEN
+                }
                 className="!absolute top-2/4 left-2 -translate-y-2/4 bg-home-carouselArrowBg rounded-full hover:bg-home-carouselArrowBg/70"
                 placeholder={undefined}
                 onPointerEnterCapture={undefined}
@@ -66,6 +73,11 @@ export default function DiscountCarousel({
                 color="black"
                 size="lg"
                 onClick={handleNext}
+                aria-label={
+                  siteMetadata.locale === "id-ID"
+                    ? discountsData.rightLabelID
+                    : discountsData.rightLabelEN
+                }
                 className="!absolute top-2/4 !right-2 -translate-y-2/4 bg-home-carouselArrowBg rounded-full hover:bg-home-carouselArrowBg/70"
                 placeholder={undefined}
                 onPointerEnterCapture={undefined}
@@ -95,7 +107,7 @@ export default function DiscountCarousel({
             {productCarousel.map(
               (productPage: Array<Product | null>, page: number) => (
                 <div
-                  key={"home-popular-carousel-" + widthIndex + "-page-" + page}
+                  key={"home-discounts-carousel-" + widthIndex + "-page-" + page}
                   className={`mx-16 sm:mx-20 grid`}
                 >
                   <div
@@ -108,7 +120,7 @@ export default function DiscountCarousel({
                     {productPage.map(
                       (product: Product | null, index: number) => (
                         <div
-                          key={`home-popular-carousel-${widthIndex}-page-${page}-product-${index}`}
+                          key={`home-discounts-carousel-${widthIndex}-page-${page}-product-${index}`}
                           className={`col-start-${index + 1} row-start-1`}
                         >
                           <ProductCard product={product} />

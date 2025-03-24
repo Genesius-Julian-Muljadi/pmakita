@@ -17,7 +17,14 @@ export default function Fresh({ products }: { products?: Array<Product> }) {
         className="flex flex-row justify-between mx-2 md:mx-4 lg:mx-6 xl:mx-8 border-b border-footer-main"
         id="home-fresh-header"
       >
-        <div className="w-72 text-2xl font-bold font-sans my-auto border-b-2 border-header-main py-4 translate-y-[0.1rem]">
+        <div
+          aria-label={
+            siteMetadata.locale === "id-ID"
+              ? freshData.headerTitleID
+              : freshData.headerTitleEN
+          }
+          className="w-72 text-2xl font-bold font-sans my-auto border-b-2 border-header-main py-4 translate-y-[0.1rem]"
+        >
           {siteMetadata.locale === "id-ID"
             ? freshData.headerTitleID
             : freshData.headerTitleEN}

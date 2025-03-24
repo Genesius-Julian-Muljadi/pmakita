@@ -53,6 +53,7 @@ export default function Hero() {
                 width={image.width || heroData.imageWidth || 1000}
                 height={image.height || heroData.imageHeight || 500}
                 alt={image.alt || heroData.imageAlt}
+                aria-label={image.alt || heroData.imageAlt}
                 className="mx-auto w-auto"
               />
             )
@@ -63,6 +64,7 @@ export default function Hero() {
             width={heroData.imageWidth || 1000}
             height={heroData.imageHeight || 500}
             alt={heroData.imageAlt}
+            aria-label={heroData.imageAlt}
             className="mx-auto w-auto"
           />
         )}

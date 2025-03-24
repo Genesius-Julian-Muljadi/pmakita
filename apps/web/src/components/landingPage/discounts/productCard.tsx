@@ -15,6 +15,7 @@ import {
 import React from "react";
 import noImages from "@/assets/noImage";
 import Image from "next/image";
+import { RatingsOff, RatingsOn } from "@/assets/icons/ratings";
 
 export function ProductCard({ product }: { product: Product | null }) {
   if (!product) {
@@ -37,6 +38,11 @@ export function ProductCard({ product }: { product: Product | null }) {
             : `${product.discount}% Dis count`
         }
         placement="top-start"
+        aria-label={
+          siteMetadata.locale === "id-ID"
+            ? `Diskon ${product.discount}%`
+            : `${product.discount}% Discount`
+        }
         className="bg-home-discountBadge font-semibold text-[0.9rem] text-center leading-tight top-0 left-0 translate-x-0 translate-y-0 w-12 rounded-2xl rounded-br-none p-2"
       >
         <Card
@@ -130,38 +136,13 @@ export function ProductCard({ product }: { product: Product | null }) {
                 <Rating
                   value={product.rating}
                   readonly
+                  aria-label={`Rating: ${product.rating}`}
                   className="scale-[0.8] origin-left"
                   ratedIcon={
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      strokeWidth="1.5"
-                      stroke="currentColor"
-                      className="size-6 text-home-rating-on fill-home-rating-on mx-[0.1rem]"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z"
-                      />
-                    </svg>
+                    <RatingsOn className="size-6 text-home-rating-on fill-home-rating-on mx-[0.1rem]" />
                   }
                   unratedIcon={
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      strokeWidth="1.5"
-                      stroke="currentColor"
-                      className="size-6 text-home-rating-off fill-home-rating-off"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z"
-                      />
-                    </svg>
+                    <RatingsOff className="size-6 text-home-rating-off fill-home-rating-off" />
                   }
                   placeholder={undefined}
                   onPointerEnterCapture={undefined}
@@ -213,6 +194,11 @@ export function ProductCard({ product }: { product: Product | null }) {
               </div>
               <Button
                 onClick={() => discountsData.addAction(product)}
+                aria-label={
+                  siteMetadata.locale === "id-ID"
+                    ? discountsData.addID
+                    : discountsData.addEN
+                }
                 className="flex flex-row justify-between w-full bg-home-addToCardBg py-[0.4rem] px-4 text-white rounded-sm shadow-none hover:shadow-none"
                 placeholder={undefined}
                 onPointerEnterCapture={undefined}

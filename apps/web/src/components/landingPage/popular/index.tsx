@@ -17,13 +17,25 @@ export default function Popular({ products }: { products?: Array<Product> }) {
         className="flex flex-row justify-between mx-2 md:mx-4 lg:mx-6 xl:mx-8 border-b border-footer-main"
         id="home-popular-header"
       >
-        <div className="w-72 text-2xl font-bold font-sans my-auto border-b-2 border-header-main py-4 translate-y-[0.1rem]">
+        <div
+          aria-label={
+            siteMetadata.locale === "id-ID"
+              ? popularData.headerTitleID
+              : popularData.headerTitleEN
+          }
+          className="w-72 text-2xl font-bold font-sans my-auto border-b-2 border-header-main py-4 translate-y-[0.1rem]"
+        >
           {siteMetadata.locale === "id-ID"
             ? popularData.headerTitleID
             : popularData.headerTitleEN}
         </div>
         <Link
           href={popularData.sideLinkHref || "/"}
+          aria-label={
+            siteMetadata.locale === "id-ID"
+              ? popularData.sideLinkID
+              : popularData.sideLinkEN
+          }
           className="flex flex-row gap-2 text-header-main/70 my-auto translate-y-1"
         >
           <span className="text-lg text-nowrap font-sans m-auto">

@@ -13,7 +13,7 @@ export function Footer() {
   return (
     <footer
       className="mt-14 mb-10 pt-16 pb-12 px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20 2xl:px-24 bg-footer-bg text-wrap 2xl:text-nowrap"
-      id="global-header"
+      id="global-footer"
     >
       <div className="container grid grid-cols-2 lg:grid-cols-4 grid-rows-2 lg:grid-rows-1 gap-y-4 gap-x-2 sm:gap-x-4 md:gap-x-6 lg:gap-x-8 xl:gap-x-10 2xl:gap-x-20 *:w-52 justify-items-center">
         <div className="flex flex-col gap-2" id="footer-section-1">

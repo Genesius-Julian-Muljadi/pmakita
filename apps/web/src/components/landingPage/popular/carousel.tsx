@@ -4,6 +4,8 @@ import { Product } from "@/interfaces/databaseTables";
 import { Carousel, IconButton } from "@material-tailwind/react";
 import { ProductCard } from "./productCard";
 import Paginate from "@/functions/paginate";
+import siteMetadata from "@/data/siteMetadata";
+import popularData from "@/data/landingPage/popularData";
 
 const PAGINATION_PAGESIZES: Array<number> = [2, 2, 3, 4, 5, 7]; // Page sizes for screen widths xs, sm, md, lg, xl, 2xl
 
@@ -39,6 +41,11 @@ export default function PopularCarousel({
                 size="lg"
                 onClick={handlePrev}
                 ripple
+                aria-label={
+                  siteMetadata.locale === "id-ID"
+                    ? popularData.leftLabelID
+                    : popularData.leftLabelEN
+                }
                 className="!absolute top-2/4 left-2 -translate-y-2/4 bg-home-carouselArrowBg rounded-full hover:bg-home-carouselArrowBg/70"
                 placeholder={undefined}
                 onPointerEnterCapture={undefined}
@@ -66,6 +73,11 @@ export default function PopularCarousel({
                 color="black"
                 size="lg"
                 onClick={handleNext}
+                aria-label={
+                  siteMetadata.locale === "id-ID"
+                    ? popularData.rightLabelID
+                    : popularData.rightLabelEN
+                }
                 className="!absolute top-2/4 !right-2 -translate-y-2/4 bg-home-carouselArrowBg rounded-full hover:bg-home-carouselArrowBg/70"
                 placeholder={undefined}
                 onPointerEnterCapture={undefined}

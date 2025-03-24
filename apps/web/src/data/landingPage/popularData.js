@@ -5,6 +5,10 @@ const popularData = {
   sideLinkID: "Lihat Semua",
   sideLinkEN: "See All",
   sideLinkHref: "",
+  leftLabelID: "Sebelumnya",
+  leftLabelEN: "Previous",
+  rightLabelID: "Selanjutnya",
+  rightLabelEN: "Next",
   stockID: "Item",
   stockEN: "Items",
 };
