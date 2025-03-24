@@ -153,7 +153,7 @@ export function ProductCard({ product }: { product: Product | null }) {
                 </span>
               </Typography>
               <Button className="flex flex-row justify-between w-[5.5rem] bg-home-freshAddToCardBG py-1 px-2 rounded-none shadow-none">
-                <freshData.addIcon className="text-black size-4 my-auto" />
+                <freshData.addIcon className="text-black size-[0.85rem] my-auto" />
                 <Typography className="my-auto text-nowrap font-mono normal-case text-sm font-medium text-black">
                   {siteMetadata.locale === "id-ID"
                     ? freshData.addID

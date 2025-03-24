@@ -17,7 +17,7 @@ import { Button } from "@material-tailwind/react";
 function Header({ token }: { token: AccessTokenUser | null }) {
   // const [cookies, setCookie, removeCookie] = useCookies(["access_token"]);
   const searchParams = useSearchParams();
-  const query: string = searchParams.get("category") || "";
+  const query: string = searchParams.get("searchtext") || "";
 
   try {
     return (
@@ -59,7 +59,7 @@ function Header({ token }: { token: AccessTokenUser | null }) {
             {/* Component list of search results. Use query const to get search query */}
           </div>
           <div className="px-6 border-r border-white" id="header-cart">
-            <headerData.cartIcon className="size-8 text-white" />
+            <headerData.cartIcon className="fill-white size-6" />
           </div>
           <div
             className="grid grid-cols-2 grid-rows-1 gap-4 px-4"

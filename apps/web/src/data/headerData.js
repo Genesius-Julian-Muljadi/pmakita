@@ -1,4 +1,4 @@
-const { ShoppingCartIcon } = require("@heroicons/react/24/outline");
+const { default: ShoppingCart } = require("@/assets/icons/shoppingCart");
 
 /** @type {import("pliny/config").PlinyConfig } */
 const headerData = {
@@ -11,7 +11,7 @@ const headerData = {
   searchDescEN: "Category",
   searchPlaceholderID: "Cari kebutuhan pokok, bahan makanan, dan lainnya...",
   searchPlaceholderEN: "Search essentials, groceries, and more...",
-  cartIcon: ShoppingCartIcon,
+  cartIcon: ShoppingCart,
   loginButtonID: "Masuk",
   loginButtonEN: "Login",
   signupButtonID: "Daftar",

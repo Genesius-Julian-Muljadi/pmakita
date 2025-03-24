@@ -1,4 +1,4 @@
-const { ShoppingCartIcon } = require("@heroicons/react/24/outline");
+const { default: ShoppingCart } = require("@/assets/icons/shoppingCart");
 
 /** @type {import("pliny/config").PlinyConfig } */
 const popularData = {
@@ -9,7 +9,7 @@ const popularData = {
   sideLinkHref: "",
   addID: "Tambah",
   addEN: "To Cart",
-  addIcon: ShoppingCartIcon,
+  addIcon: ShoppingCart,
 };
 
 module.exports = popularData;
