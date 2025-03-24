@@ -1,7 +1,6 @@
 import type { Config } from "tailwindcss";
 const withMT = require("@material-tailwind/react/utils/withMT");
 const { fontFamily } = require("tailwindcss/defaultTheme");
-const colors = require("tailwindcss/colors");
 
 const config: Config = withMT({
   content: [
