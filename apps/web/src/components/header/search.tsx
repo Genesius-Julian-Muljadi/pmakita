@@ -21,12 +21,15 @@ export default function Search({ placeholder }: { placeholder: string }) {
   }, 500);
 
   return (
-    <div className="relative flex flex-1 flex-shrink-0 w-[55vw] min-w-96">
+    <div
+      aria-label="Search"
+      className="relative flex flex-1 flex-shrink-0 w-[55vw] min-w-96"
+    >
       <label htmlFor="search" className="sr-only">
         Search
       </label>
       <input
-        className="peer block w-full rounded-lg border border-gray-200 bg-header-search-bg py-[12px] pl-10 text-sm outline-2 placeholder:text-header-search-placeholder"
+        className="peer block w-full rounded-lg border border-gray-200 bg-header-search-bg py-2 lg:py-3 pl-10 text-sm outline-2 placeholder:text-header-search-placeholder"
         placeholder={placeholder}
         onChange={(e) => {
           handleSearch(e.target.value);

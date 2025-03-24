@@ -27,7 +27,8 @@ function Header({ token }: { token: AccessTokenUser | null }) {
         <div className="w-full h-36 px-4 sm:px-6 xl:px-8 flex flex-row gap-2 justify-evenly items-center max-w-full bg-header-main">
           <Link
             href="/"
-            className="hidden md:block mx-0 md:mx-2 lg:mx-4"
+            aria-label={headerData.logoAlt}
+            className="mx-0 md:mx-2 lg:mx-4"
             id="header-logo"
           >
             <Image
@@ -39,53 +40,79 @@ function Header({ token }: { token: AccessTokenUser | null }) {
               priority
             />
           </Link>
-          <div
-            className="flex flex-row gap-2 md:gap-4 lg:gap-6 my-auto ml-3 md:ml-10"
-            id="header-search"
-          >
-            <span className="hidden md:block font-semibold font-sans my-auto text-white">
-              {siteMetadata.locale === "id-ID"
-                ? headerData.searchDescID
-                : headerData.searchDescEN}
-            </span>
-            <Search
-              placeholder={
-                siteMetadata.locale === "id-ID"
-                  ? headerData.searchPlaceholderID
-                  : headerData.searchPlaceholderEN
-              }
-            />
-            {/* Component list of search results. Use query const to get search query */}
-          </div>
-          <div className="px-6 border-r border-white" id="header-cart">
-            <headerData.cartIcon className="fill-white size-6" />
-          </div>
-          <div
-            className="grid grid-cols-2 grid-rows-1 gap-4 px-4"
-            id="header-login-register"
-          >
-            <Button
-              size="sm"
-              className="normal-case font-extrabold font-sans outline outline-header-main bg-white text-header-main hover:bg-header-main hover:text-white hover:outline-white"
-              placeholder={undefined}
-              onPointerEnterCapture={undefined}
-              onPointerLeaveCapture={undefined}
+          <div className="flex flex-col lg:flex-row gap-x-2 gap-y-4">
+            <div
+              className="flex flex-row gap-2 md:gap-4 lg:gap-6 my-auto ml-3 md:ml-10"
+              id="header-search"
             >
-              {siteMetadata.locale === "id-ID"
-                ? headerData.loginButtonID
-                : headerData.loginButtonEN}
-            </Button>
-            <Button
-              size="sm"
-              className="normal-case font-extrabold font-sans outline outline-white bg-header-main text-white hover:bg-white hover:text-header-main hover:outline-header-main"
-              placeholder={undefined}
-              onPointerEnterCapture={undefined}
-              onPointerLeaveCapture={undefined}
-            >
-              {siteMetadata.locale === "id-ID"
-                ? headerData.signupButtonID
-                : headerData.signupButtonEN}
-            </Button>
+              <span className="hidden md:block lg:hidden 2xl:block font-semibold font-sans my-auto text-white">
+                {siteMetadata.locale === "id-ID"
+                  ? headerData.searchDescID
+                  : headerData.searchDescEN}
+              </span>
+              <Search
+                placeholder={
+                  siteMetadata.locale === "id-ID"
+                    ? headerData.searchPlaceholderID
+                    : headerData.searchPlaceholderEN
+                }
+              />
+              {/* Component list of search results. Use query const to get search query */}
+            </div>
+            <div className="flex flex-row my-auto ml-auto">
+              <div
+                aria-label={
+                  siteMetadata.locale === "id-ID"
+                    ? headerData.cartLabelID
+                    : headerData.cartLabelEN
+                }
+                className="px-6 border-r border-white m-auto"
+                id="header-cart"
+              >
+                <headerData.cartIcon className="fill-white size-6" />
+              </div>
+              <div
+                className="flex flex-row lg:flex-col 2xl:flex-row gap-4 px-4 m-auto"
+                id="header-login-register"
+              >
+                <Button
+                  size="sm"
+                  aria-label={
+                    siteMetadata.locale === "id-ID"
+                      ? headerData.loginButtonID
+                      : headerData.loginButtonEN
+                  }
+                  className="grid p-0 h-[1.8rem] w-[4.3rem] normal-case font-extrabold font-sans outline outline-header-main bg-white text-header-main hover:bg-header-main hover:text-white hover:outline-white"
+                  placeholder={undefined}
+                  onPointerEnterCapture={undefined}
+                  onPointerLeaveCapture={undefined}
+                >
+                  <span className="m-auto">
+                    {siteMetadata.locale === "id-ID"
+                      ? headerData.loginButtonID
+                      : headerData.loginButtonEN}
+                  </span>
+                </Button>
+                <Button
+                  size="sm"
+                  aria-label={
+                    siteMetadata.locale === "id-ID"
+                      ? headerData.signupButtonID
+                      : headerData.signupButtonEN
+                  }
+                  className="grid p-0 h-[1.8rem] w-[4.3rem] normal-case font-extrabold font-sans outline outline-white bg-header-main text-white hover:bg-white hover:text-header-main hover:outline-header-main"
+                  placeholder={undefined}
+                  onPointerEnterCapture={undefined}
+                  onPointerLeaveCapture={undefined}
+                >
+                  <span className="m-auto">
+                    {siteMetadata.locale === "id-ID"
+                      ? headerData.signupButtonID
+                      : headerData.signupButtonEN}
+                  </span>
+                </Button>
+              </div>
+            </div>
           </div>
         </div>
       </header>
