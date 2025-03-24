@@ -11,6 +11,10 @@ const headerData = {
   searchDescEN: "Category",
   searchPlaceholderID: "Cari kebutuhan pokok, bahan makanan, dan lainnya...",
   searchPlaceholderEN: "Search essentials, groceries, and more...",
+  searchAction: (searchText) => {
+    console.log("Search!");
+    console.log(searchText);
+  },
   cartIcon: ShoppingCart,
   loginButtonID: "Masuk",
   loginButtonEN: "Login",

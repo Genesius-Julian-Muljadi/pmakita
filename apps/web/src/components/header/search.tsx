@@ -1,5 +1,6 @@
 "use client";
 
+import headerData from "@/data/headerData";
 import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { useDebouncedCallback } from "use-debounce";
@@ -32,7 +33,14 @@ export default function Search({ placeholder }: { placeholder: string }) {
         }}
         defaultValue={searchParams.get("searchtext")?.toString()}
       />
-      <MagnifyingGlassIcon className="absolute left-3 top-1/2 h-[18px] w-[18px] -translate-y-1/2 text-header-main/90 peer-focus:text-header-main" />
+      <button
+        onClick={() =>
+          headerData.searchAction(searchParams.get("searchtext")?.toString())
+        }
+        className="absolute left-3 top-1/2 scale-150 origin-center -translate-y-1/2 hover:bg-black/5 active:bg-black/10 rounded-md"
+      >
+        <MagnifyingGlassIcon className="scale-75 origin-center h-[18px] w-[18px] text-header-main/90 peer-focus:text-header-main" />
+      </button>
     </div>
   );
 }
