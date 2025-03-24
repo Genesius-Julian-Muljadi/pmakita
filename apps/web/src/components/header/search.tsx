@@ -37,6 +37,7 @@ export default function Search({ placeholder }: { placeholder: string }) {
         defaultValue={searchParams.get("searchtext")?.toString()}
       />
       <button
+        aria-label="Search"
         onClick={() =>
           headerData.searchAction(searchParams.get("searchtext")?.toString())
         }
