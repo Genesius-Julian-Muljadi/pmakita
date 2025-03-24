@@ -30,7 +30,15 @@ export function ProductCard({ product }: { product: Product | null }) {
     );
   } else {
     return (
-      <Badge placement="top-start">
+      <Badge
+        content={
+          siteMetadata.locale === "id-ID"
+            ? `Dis kon ${product.discount}%`
+            : `${product.discount}% Dis count`
+        }
+        placement="top-start"
+        className="bg-home-discountBadge font-semibold text-[0.9rem] text-center leading-tight top-0 left-0 translate-x-0 translate-y-0 w-12 rounded-2xl rounded-br-none p-2"
+      >
         <Card
           className="w-56 h-[24.3rem] mx-auto bg-white shadow-none border border-home-freshCardBorder rounded-2xl"
           placeholder={undefined}
