@@ -136,7 +136,6 @@ export function ProductCard({ product }: { product: Product | null }) {
                 <Rating
                   value={product.rating}
                   readonly
-                  aria-label={`Rating: ${product.rating}`}
                   className="scale-[0.8] origin-left"
                   ratedIcon={
                     <RatingsOn className="size-6 text-home-rating-on fill-home-rating-on mx-[0.1rem]" />

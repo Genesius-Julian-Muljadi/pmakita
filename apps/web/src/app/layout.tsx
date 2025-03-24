@@ -1,8 +1,6 @@
 import "./globals.css";
-import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import { Footer, Layout } from "@/components";
-import siteMetadata from "@/data/siteMetadata";
 import Header from "@/components/header";
 
 const roboto = Roboto({
@@ -10,11 +8,6 @@ const roboto = Roboto({
   weight: ["300", "400", "500", "700", "900"],
   display: "swap",
 });
-
-export const metadata: Metadata = {
-  title: siteMetadata.homeTitle || "homeTitle",
-  description: siteMetadata.homeMetaDescription || "homeMetaDescription",
-};
 
 export default function RootLayout({
   children,

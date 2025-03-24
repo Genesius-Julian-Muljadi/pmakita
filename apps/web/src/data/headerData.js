@@ -15,8 +15,6 @@ const headerData = {
     console.log("Search!");
     console.log(searchText);
   },
-  cartLabelID: "Keranjang",
-  cartLabelEN: "Cart",
   cartIcon: ShoppingCart,
   loginButtonID: "Masuk",
   loginButtonEN: "Login",

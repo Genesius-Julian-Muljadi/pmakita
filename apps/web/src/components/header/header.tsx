@@ -61,11 +61,6 @@ function Header({ token }: { token: AccessTokenUser | null }) {
             </div>
             <div className="flex flex-row my-auto ml-auto">
               <div
-                aria-label={
-                  siteMetadata.locale === "id-ID"
-                    ? headerData.cartLabelID
-                    : headerData.cartLabelEN
-                }
                 className="px-6 border-r border-white m-auto"
                 id="header-cart"
               >

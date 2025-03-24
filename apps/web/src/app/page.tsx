@@ -3,6 +3,13 @@ import Hero from "../components/landingPage/hero";
 import axios from "axios";
 import Fresh from "@/components/landingPage/fresh";
 import Discounts from "@/components/landingPage/discounts";
+import { Metadata } from "next";
+import siteMetadata from "@/data/siteMetadata";
+
+export const metadata: Metadata = {
+  title: siteMetadata.homeTitle || "homeTitle",
+  description: siteMetadata.homeMetaDescription || "homeMetaDescription",
+};
 
 export default async function Home() {
   let products = undefined;
