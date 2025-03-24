@@ -3,7 +3,7 @@ const { default: Phone } = require("@/assets/icons/phone");
 const { default: noImages } = require("@/assets/noImage");
 
 /** @type {import("pliny/config").PlinyConfig } */
-const headerData = {
+const footerData = {
   section_1TitleID: "Kategori Populer",
   section_1TitleEN: "Popular Categories",
   section_2TitleID: "Layanan Pelanggan",
@@ -67,4 +67,4 @@ const headerData = {
   ],
 };
 
-module.exports = headerData;
+module.exports = footerData;
