@@ -2,7 +2,6 @@
 
 import siteMetadata from "@/data/siteMetadata";
 import footerData from "@/data/footerData";
-import { Typography } from "@material-tailwind/react";
 import Link from "@/components/Link";
 import Image from "next/image";
 
@@ -18,7 +17,7 @@ export function Footer() {
     >
       <div className="container grid grid-cols-2 lg:grid-cols-4 grid-rows-2 lg:grid-rows-1 gap-y-4 gap-x-2 sm:gap-x-4 md:gap-x-6 lg:gap-x-8 xl:gap-x-10 2xl:gap-x-20 *:w-52 justify-items-center">
         <div className="flex flex-col gap-2" id="footer-section-1">
-          <Typography
+          <span
             aria-label={
               siteMetadata.locale === "id-ID"
                 ? footerData.section_1TitleID
@@ -29,7 +28,7 @@ export function Footer() {
             {siteMetadata.locale === "id-ID"
               ? footerData.section_1TitleID
               : footerData.section_1TitleEN}
-          </Typography>
+          </span>
           {gap}
           <div className="mt-3 text-md text-footer-li font-sans font-normal flex flex-col gap-2">
             {footerData.section_1Content.map(
@@ -58,7 +57,7 @@ export function Footer() {
           </div>
         </div>
         <div className="flex flex-col gap-2" id="footer-section-2">
-          <Typography
+          <span
             aria-label={
               siteMetadata.locale === "id-ID"
                 ? footerData.section_2TitleID
@@ -69,7 +68,7 @@ export function Footer() {
             {siteMetadata.locale === "id-ID"
               ? footerData.section_2TitleID
               : footerData.section_2TitleEN}
-          </Typography>
+          </span>
           {gap}
           <div className="mt-3 text-md text-footer-li font-sans font-normal flex flex-col gap-2">
             {footerData.section_2Content.map(
@@ -98,7 +97,7 @@ export function Footer() {
           </div>
         </div>
         <div className="flex flex-col gap-2" id="footer-section-3">
-          <Typography
+          <span
             aria-label={
               siteMetadata.locale === "id-ID"
                 ? footerData.section_3TitleID
@@ -109,7 +108,7 @@ export function Footer() {
             {siteMetadata.locale === "id-ID"
               ? footerData.section_3TitleID
               : footerData.section_3TitleEN}
-          </Typography>
+          </span>
           {gap}
           <div className="mt-3 text-md text-footer-li font-sans font-normal flex flex-col gap-4">
             {footerData.section_3Content.map(
@@ -148,7 +147,7 @@ export function Footer() {
           </div>
         </div>
         <div className="flex flex-col gap-2" id="footer-section-4">
-          <Typography
+          <span
             aria-label={
               siteMetadata.locale === "id-ID"
                 ? footerData.section_4TitleID
@@ -159,7 +158,7 @@ export function Footer() {
             {siteMetadata.locale === "id-ID"
               ? footerData.section_4TitleID
               : footerData.section_4TitleEN}
-          </Typography>
+          </span>
           {gap}
           <div className="mt-3 text-md text-footer-li font-sans font-normal flex flex-col gap-6">
             {footerData.section_4Content.map(

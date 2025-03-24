@@ -6,7 +6,6 @@ import {
   Card,
   CardHeader,
   CardBody,
-  Typography,
   Rating,
   Button,
 } from "@material-tailwind/react";
@@ -71,7 +70,7 @@ export function ProductCard({ product }: { product: Product | null }) {
         <CardBody className="pt-2 pb-0 px-3 mb-auto">
           <div className="flex flex-col gap-2 justify-start">
             <div className="flex flex-col gap-0">
-              <Typography
+              <span
                 color="black"
                 aria-label={
                   siteMetadata.locale === "id-ID" || !product.nameEN
@@ -83,8 +82,8 @@ export function ProductCard({ product }: { product: Product | null }) {
                 {siteMetadata.locale === "id-ID" || !product.nameEN
                   ? product.nameID
                   : product.nameEN}
-              </Typography>
-              <Typography
+              </span>
+              <span
                 color="black"
                 aria-label={
                   siteMetadata.locale === "id-ID" || !product.unitEN
@@ -96,7 +95,7 @@ export function ProductCard({ product }: { product: Product | null }) {
                 {siteMetadata.locale === "id-ID" || !product.unitEN
                   ? product.unitID
                   : product.unitEN}
-              </Typography>
+              </span>
             </div>
             <div className="flex flex-row">
               <Rating
@@ -136,12 +135,12 @@ export function ProductCard({ product }: { product: Product | null }) {
                   </svg>
                 }
               />
-              <Typography className="font-normal font-sans normal-case my-auto text-sm text-home-rating-value -translate-x-4">
+              <span className="font-normal font-sans normal-case my-auto text-sm text-home-rating-value -translate-x-4">
                 <span>{`(${product.rating})`}</span>
-              </Typography>
+              </span>
             </div>
             <div className="flex flex-row justify-between">
-              <Typography
+              <span
                 aria-label={new Intl.NumberFormat("id-ID", {
                   style: "currency",
                   currency: "IDR",
@@ -151,14 +150,17 @@ export function ProductCard({ product }: { product: Product | null }) {
                 <span>
                   Rp{product.price.toLocaleString(siteMetadata.locale)}
                 </span>
-              </Typography>
-              <Button className="flex flex-row justify-between w-[5.5rem] bg-home-freshAddToCardBG py-1 px-2 rounded-none shadow-none">
+              </span>
+              <Button
+                onClick={() => freshData.addAction(product)}
+                className="flex flex-row justify-between w-[5.5rem] bg-home-freshAddToCardBG py-1 px-2 rounded-sm shadow-none hover:shadow-none"
+              >
                 <freshData.addIcon className="text-black size-[0.85rem] my-auto" />
-                <Typography className="my-auto text-nowrap font-mono normal-case text-sm font-medium text-black">
+                <span className="my-auto text-nowrap font-mono normal-case text-sm font-medium text-black">
                   {siteMetadata.locale === "id-ID"
                     ? freshData.addID
                     : freshData.addEN}
-                </Typography>
+                </span>
               </Button>
             </div>
           </div>

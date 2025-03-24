@@ -4,8 +4,10 @@ interface Product {
   nameID: string;
   nameEN?: string;
   stock: number;
+  maxStock: number;
   popular?: boolean;
   fresh?: boolean;
+  discount?: number;
   unitID: string;
   unitEN?: string;
   location: string;

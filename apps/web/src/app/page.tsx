@@ -2,6 +2,7 @@ import Popular from "@/components/landingPage/popular";
 import Hero from "../components/landingPage/hero";
 import axios from "axios";
 import Fresh from "@/components/landingPage/fresh";
+import Discounts from "@/components/landingPage/discounts";
 
 export default async function Home() {
   let products = undefined;
@@ -24,6 +25,7 @@ export default async function Home() {
       <Hero />
       <Popular products={products} />
       <Fresh products={products} />
+      <Discounts products={products} />
     </div>
   );
 }

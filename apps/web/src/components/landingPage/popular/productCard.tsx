@@ -6,7 +6,6 @@ import {
   Card,
   CardHeader,
   CardBody,
-  Typography,
 } from "@material-tailwind/react";
 import React from "react";
 import noImages from "@/assets/noImage";
@@ -68,7 +67,7 @@ export function ProductCard({ product }: { product: Product | null }) {
         </CardHeader>
         <CardBody className="pt-4 pb-0 mb-6">
           <div className="flex flex-col">
-            <Typography
+            <span
               color="black"
               aria-label={
                 siteMetadata.locale === "id-ID" || !product.nameEN
@@ -80,8 +79,8 @@ export function ProductCard({ product }: { product: Product | null }) {
               {siteMetadata.locale === "id-ID" || !product.nameEN
                 ? product.nameID
                 : product.nameEN}
-            </Typography>
-            <Typography
+            </span>
+            <span
               color="black"
               aria-label={product.stock.toString()}
               className="font-normal font-sans normal-case mx-auto text-base text-home-stockText"
@@ -92,7 +91,7 @@ export function ProductCard({ product }: { product: Product | null }) {
                   ? popularData.stockID
                   : popularData.stockEN}
               </span>
-            </Typography>
+            </span>
           </div>
         </CardBody>
       </Card>
