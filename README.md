@@ -4,6 +4,8 @@
 
 This is a prototype of the landing page for Pasar Makita. App consists of only front-end, contains only framework and lacks data and many functions from the true landing page.
 
+Landing page contains my own configurations for varying screen widths.
+
 Please update data as necessary using the .js files in apps/web/src/data .
 
 ### Technologies
