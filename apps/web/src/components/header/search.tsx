@@ -23,7 +23,7 @@ export default function Search({ placeholder }: { placeholder: string }) {
   return (
     <div
       aria-label="Search"
-      className="relative flex flex-1 flex-shrink-0 w-[55vw] min-w-96"
+      className="relative flex flex-1 flex-shrink-0 w-[55vw] min-w-[21rem] sm:min-w-96"
     >
       <label htmlFor="search" className="sr-only">
         Search
