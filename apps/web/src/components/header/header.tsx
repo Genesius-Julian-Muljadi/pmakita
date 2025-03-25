@@ -24,7 +24,7 @@ function Header({ token }: { token: AccessTokenUser | null }) {
         className={headerData.sticky ? "sticky top-0 z-50" : ""}
         id="global-header"
       >
-        <div className="w-full h-36 px-4 sm:px-6 xl:px-8 flex flex-row gap-2 justify-evenly items-center max-w-full bg-header-main">
+        <div className="w-full h-36 px-2 sm:px-6 xl:px-8 flex flex-row gap-2 justify-evenly items-center max-w-full bg-header-main">
           <Link
             href="/"
             aria-label={headerData.logoAlt}

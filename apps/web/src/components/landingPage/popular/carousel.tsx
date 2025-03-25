@@ -7,7 +7,7 @@ import Paginate from "@/functions/paginate";
 import siteMetadata from "@/data/siteMetadata";
 import popularData from "@/data/landingPage/popularData";
 
-const PAGINATION_PAGESIZES: Array<number> = [2, 2, 3, 4, 5, 7]; // Page sizes for screen widths xs, sm, md, lg, xl, 2xl
+const PAGINATION_PAGESIZES: Array<number> = [1, 2, 3, 4, 5, 7]; // Page sizes for screen widths xs, sm, md, lg, xl, 2xl
 
 export default function PopularCarousel({
   products,

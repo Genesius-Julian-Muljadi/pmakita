@@ -23,7 +23,7 @@ export default function Fresh({ products }: { products?: Array<Product> }) {
               ? freshData.headerTitleID
               : freshData.headerTitleEN
           }
-          className="w-72 text-2xl font-bold font-sans my-auto border-b-2 border-header-main py-4 translate-y-[0.1rem]"
+          className="w-56 sm:w-72 text-xl sm:text-2xl font-bold font-sans my-auto border-b-2 border-header-main py-4 translate-y-[0.1rem]"
         >
           {siteMetadata.locale === "id-ID"
             ? freshData.headerTitleID
@@ -31,14 +31,14 @@ export default function Fresh({ products }: { products?: Array<Product> }) {
         </div>
         <Link
           href={freshData.sideLinkHref || "/"}
-          className="flex flex-row gap-2 text-header-main/70 my-auto translate-y-1"
+          className="flex flex-row gap-1 sm:gap-2 text-header-main/70 my-auto translate-y-1"
         >
-          <span className="text-lg text-nowrap font-sans m-auto">
+          <span className="text-base sm:text-lg text-nowrap font-sans m-auto">
             {siteMetadata.locale === "id-ID"
               ? freshData.sideLinkID
               : freshData.sideLinkEN}
           </span>
-          <ChevronRightIcon className="size-5 m-auto" />
+          <ChevronRightIcon className="size-4 sm:size-5 m-auto" />
         </Link>
       </div>
       <FreshCarousel products={freshProducts} />

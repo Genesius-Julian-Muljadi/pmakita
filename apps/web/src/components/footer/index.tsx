@@ -7,7 +7,7 @@ import Image from "next/image";
 
 export function Footer() {
   const gap = (
-    <div className="border-[1.5px] border-footer-gap rounded-md w-44" />
+    <div className="border sm:border-[1.5px] border-footer-gap rounded-md w-40 sm:w-44" />
   );
 
   return (
@@ -23,7 +23,7 @@ export function Footer() {
                 ? footerData.section_1TitleID
                 : footerData.section_1TitleEN
             }
-            className="font-normal font-sans normal-case text-xl text-black"
+            className="font-normal font-sans normal-case text-lg sm:text-xl text-black"
           >
             {siteMetadata.locale === "id-ID"
               ? footerData.section_1TitleID
@@ -46,7 +46,7 @@ export function Footer() {
                   }
                   className="mr-auto"
                 >
-                  <span>
+                  <span className="text-sm sm:text-base">
                     {siteMetadata.locale === "id-ID"
                       ? content.titleID
                       : content.titleEN}
@@ -63,7 +63,7 @@ export function Footer() {
                 ? footerData.section_2TitleID
                 : footerData.section_2TitleEN
             }
-            className="font-normal font-sans normal-case text-xl text-black"
+            className="font-normal font-sans normal-case text-lg sm:text-xl text-black"
           >
             {siteMetadata.locale === "id-ID"
               ? footerData.section_2TitleID
@@ -86,7 +86,7 @@ export function Footer() {
                   }
                   className="mr-auto"
                 >
-                  <span>
+                  <span className="text-sm sm:text-base">
                     {siteMetadata.locale === "id-ID"
                       ? content.titleID
                       : content.titleEN}
@@ -103,7 +103,7 @@ export function Footer() {
                 ? footerData.section_3TitleID
                 : footerData.section_3TitleEN
             }
-            className="font-normal font-sans normal-case text-xl text-black"
+            className="font-normal font-sans normal-case text-lg sm:text-xl text-black"
           >
             {siteMetadata.locale === "id-ID"
               ? footerData.section_3TitleID
@@ -132,8 +132,8 @@ export function Footer() {
                   }
                   className="mr-auto flex flex-row gap-2"
                 >
-                  <content.icon className="size-6" />
-                  <div className="flex flex-col">
+                  <content.icon className="size-5 sm:size-6" />
+                  <div className="flex flex-col text-sm sm:text-base">
                     <span>
                       {siteMetadata.locale === "id-ID"
                         ? content.titleID
@@ -153,7 +153,7 @@ export function Footer() {
                 ? footerData.section_4TitleID
                 : footerData.section_4TitleEN
             }
-            className="font-normal font-sans normal-case text-xl text-black"
+            className="font-normal font-sans normal-case text-lg sm:text-xl text-black"
           >
             {siteMetadata.locale === "id-ID"
               ? footerData.section_4TitleID
@@ -174,7 +174,7 @@ export function Footer() {
                   key={"section_4-" + index}
                   href={content.href}
                   aria-label={content.alt}
-                  className="w-40"
+                  className="w-36 sm:w-40"
                 >
                   <Image
                     src={content.icon}

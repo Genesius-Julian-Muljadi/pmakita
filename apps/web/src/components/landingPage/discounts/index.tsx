@@ -17,21 +17,21 @@ export default function Discounts({ products }: { products?: Array<Product> }) {
         className="flex flex-row justify-between mx-2 md:mx-4 lg:mx-6 xl:mx-8 border-b border-footer-main"
         id="home-fresh-header"
       >
-        <div className="w-72 text-2xl font-bold font-sans my-auto border-b-2 border-header-main py-4 translate-y-[0.1rem] text-nowrap">
+        <div className="w-56 sm:w-72 text-xl sm:text-2xl font-bold font-sans my-auto border-b-2 border-header-main py-4 translate-y-[0.1rem] text-nowrap">
           {siteMetadata.locale === "id-ID"
             ? discountsData.headerTitleID
             : discountsData.headerTitleEN}
         </div>
         <Link
           href={discountsData.sideLinkHref || "/"}
-          className="flex flex-row gap-2 text-header-main/70 my-auto translate-y-1"
+          className="flex flex-row gap-1 sm:gap-2 text-header-main/70 my-auto translate-y-1"
         >
-          <span className="text-lg text-nowrap font-sans m-auto">
+          <span className="text-base sm:text-lg text-nowrap font-sans m-auto">
             {siteMetadata.locale === "id-ID"
               ? discountsData.sideLinkID
               : discountsData.sideLinkEN}
           </span>
-          <ChevronRightIcon className="size-5 m-auto" />
+          <ChevronRightIcon className="size-4 sm:size-5 m-auto" />
         </Link>
       </div>
       <DiscountCarousel products={discountsProducts} />
