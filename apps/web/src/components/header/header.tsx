@@ -78,9 +78,6 @@ function Header({ token }: { token: AccessTokenUser | null }) {
                       : headerData.loginButtonEN
                   }
                   className="grid p-0 h-[1.8rem] w-[4.3rem] normal-case font-extrabold font-sans outline outline-header-main bg-white text-header-main hover:bg-header-main hover:text-white hover:outline-white"
-                  placeholder={undefined}
-                  onPointerEnterCapture={undefined}
-                  onPointerLeaveCapture={undefined}
                 >
                   <span className="m-auto">
                     {siteMetadata.locale === "id-ID"
@@ -96,9 +93,6 @@ function Header({ token }: { token: AccessTokenUser | null }) {
                       : headerData.signupButtonEN
                   }
                   className="grid p-0 h-[1.8rem] w-[4.3rem] normal-case font-extrabold font-sans outline outline-white bg-header-main text-white hover:bg-white hover:text-header-main hover:outline-header-main"
-                  placeholder={undefined}
-                  onPointerEnterCapture={undefined}
-                  onPointerLeaveCapture={undefined}
                 >
                   <span className="m-auto">
                     {siteMetadata.locale === "id-ID"

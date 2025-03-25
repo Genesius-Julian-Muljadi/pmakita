@@ -32,9 +32,6 @@ export default function Hero() {
             ))}
           </div>
         )}
-        placeholder={undefined}
-        onPointerEnterCapture={undefined}
-        onPointerLeaveCapture={undefined}
       >
         {heroData.imageData.length > 0 ? (
           heroData.imageData.map(

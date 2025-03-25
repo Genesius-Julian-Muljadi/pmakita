@@ -20,12 +20,7 @@ import { RatingsOff, RatingsOn } from "@/assets/icons/ratings";
 export function ProductCard({ product }: { product: Product | null }) {
   if (!product) {
     return (
-      <Card
-        className="w-56 h-[24.3rem] mx-auto bg-transparent shadow-none"
-        placeholder={undefined}
-        onPointerEnterCapture={undefined}
-        onPointerLeaveCapture={undefined}
-      >
+      <Card className="w-56 h-[24.3rem] mx-auto bg-transparent shadow-none">
         {null}
       </Card>
     );
@@ -45,19 +40,11 @@ export function ProductCard({ product }: { product: Product | null }) {
         }
         className="bg-home-discountBadge font-semibold text-[0.9rem] text-center leading-tight top-0 left-0 translate-x-0 translate-y-0 w-12 rounded-2xl rounded-br-none p-2"
       >
-        <Card
-          className="w-56 h-[24.3rem] mx-auto bg-white shadow-none border border-home-freshCardBorder rounded-2xl"
-          placeholder={undefined}
-          onPointerEnterCapture={undefined}
-          onPointerLeaveCapture={undefined}
-        >
+        <Card className="w-56 h-[24.3rem] mx-auto bg-white shadow-none border border-home-freshCardBorder rounded-2xl">
           <CardHeader
             shadow={false}
             floated={false}
             className="rounded-none mt-5 mx-3 w-auto"
-            placeholder={undefined}
-            onPointerEnterCapture={undefined}
-            onPointerLeaveCapture={undefined}
           >
             {noImages.includes(product.image) ? (
               <Image
@@ -97,12 +84,7 @@ export function ProductCard({ product }: { product: Product | null }) {
               />
             )}
           </CardHeader>
-          <CardBody
-            className="pt-2 pb-0 px-3 mb-auto"
-            placeholder={undefined}
-            onPointerEnterCapture={undefined}
-            onPointerLeaveCapture={undefined}
-          >
+          <CardBody className="pt-2 pb-0 px-3 mb-auto">
             <div className="flex flex-col gap-2 justify-between">
               <div className="flex flex-col gap-0">
                 <span
@@ -143,9 +125,6 @@ export function ProductCard({ product }: { product: Product | null }) {
                   unratedIcon={
                     <RatingsOff className="size-6 text-home-rating-off fill-home-rating-off" />
                   }
-                  placeholder={undefined}
-                  onPointerEnterCapture={undefined}
-                  onPointerLeaveCapture={undefined}
                 />
                 <span className="font-normal font-sans normal-case my-auto text-sm text-home-rating-value -translate-x-4">
                   <span>{`(${product.rating})`}</span>
@@ -178,9 +157,6 @@ export function ProductCard({ product }: { product: Product | null }) {
                   }
                   size="sm"
                   className="*:bg-home-salesProgressBar h-[0.3rem]"
-                  placeholder={undefined}
-                  onPointerEnterCapture={undefined}
-                  onPointerLeaveCapture={undefined}
                 />
                 <span className="font-medium font-sans text-[0.75rem] text-home-salesProgressBar">
                   <span>
@@ -199,9 +175,6 @@ export function ProductCard({ product }: { product: Product | null }) {
                     : discountsData.addEN
                 }
                 className="flex flex-row justify-between w-full bg-home-addToCardBg py-[0.4rem] px-4 text-white rounded-sm shadow-none hover:shadow-none"
-                placeholder={undefined}
-                onPointerEnterCapture={undefined}
-                onPointerLeaveCapture={undefined}
               >
                 <discountsData.addIcon className="size-[0.85rem] my-auto fill-white" />
                 <span className="my-auto text-nowrap font-mono normal-case text-sm font-medium">
