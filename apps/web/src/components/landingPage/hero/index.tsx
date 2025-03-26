@@ -11,6 +11,9 @@ export default function Hero() {
       <Carousel
         className="flex"
         id="home-hero-carousel"
+        autoplay
+        autoplayDelay={5000}
+        loop
         prevArrow={({ handlePrev }) => (
           <heroData.prevArrowIcon handleNext={handlePrev} />
         )}
@@ -18,7 +21,7 @@ export default function Hero() {
           <heroData.nextArrowIcon handleNext={handleNext} />
         )}
         navigation={({ setActiveIndex, activeIndex, length }) => (
-          <div className="absolute bottom-4 left-0 z-50 flex translate-x-1/3 gap-2">
+          <div className="absolute bottom-[0.62rem] left-0 z-50 flex translate-x-1/3 gap-2">
             {new Array(length).fill("").map((_, i) => (
               <span
                 key={i}
@@ -47,22 +50,22 @@ export default function Hero() {
               <Image
                 key={image.alt + index}
                 src={image.src || noImages[2]}
-                width={image.width || heroData.imageWidth || 1000}
-                height={image.height || heroData.imageHeight || 500}
+                width={image.width || heroData.imageWidth || 2000}
+                height={image.height || heroData.imageHeight || 1000}
                 alt={image.alt || heroData.imageAlt}
                 aria-label={image.alt || heroData.imageAlt}
-                className="mx-auto w-auto"
+                className="mx-auto w-full"
               />
             )
           )
         ) : (
           <Image
             src={noImages[2]}
-            width={heroData.imageWidth || 1000}
-            height={heroData.imageHeight || 500}
+            width={heroData.imageWidth || 2000}
+            height={heroData.imageHeight || 1000}
             alt={heroData.imageAlt}
             aria-label={heroData.imageAlt}
-            className="mx-auto w-auto"
+            className="mx-auto w-full"
           />
         )}
       </Carousel>

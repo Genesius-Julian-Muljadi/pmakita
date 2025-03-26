@@ -179,8 +179,8 @@ export function Footer() {
                   <Image
                     src={content.icon}
                     alt={content.alt}
-                    height={100}
-                    width={300}
+                    height={200}
+                    width={350}
                     className="w-full h-full object-covert"
                   />
                 </Link>

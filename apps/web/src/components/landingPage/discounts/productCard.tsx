@@ -44,7 +44,7 @@ export function ProductCard({ product }: { product: Product | null }) {
           <CardHeader
             shadow={false}
             floated={false}
-            className="rounded-none mt-5 mx-3 w-auto"
+            className="rounded-none mt-5 mx-3 w-auto h-[9.3rem]"
           >
             {noImages.includes(product.image) ? (
               <Image

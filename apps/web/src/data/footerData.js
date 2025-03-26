@@ -56,12 +56,12 @@ const footerData = {
   section_4Content: [
     {
       href: "/",
-      icon: noImages[2],
+      icon: "https://i.imgur.com/Oe5JdcL.png",
       alt: "section_4-1",
     },
     {
       href: "/",
-      icon: noImages[2],
+      icon: "https://i.imgur.com/w4nRdno.png",
       alt: "section_4-2",
     },
   ],

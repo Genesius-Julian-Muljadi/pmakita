@@ -7,19 +7,19 @@ const heroData = {
   imageAlt: "hero_carousel_image",
   imageData: [
     {
-      src: "",
+      src: "https://i.imgur.com/eN4q3UX.png",
+      width: null,
+      height: null,
+      alt: "hero-1",
+    },
+    {
+      src: "https://i.imgur.com/6rPdgFK.png",
       width: null,
       height: null,
       alt: "",
     },
     {
-      src: "",
-      width: null,
-      height: null,
-      alt: "",
-    },
-    {
-      src: "",
+      src: "https://i.imgur.com/tao0zgA.png",
       width: null,
       height: null,
       alt: "",
