@@ -24,7 +24,7 @@ function Header({ token }: { token: AccessTokenUser | null }) {
         className={headerData.sticky ? "sticky top-0 z-50" : ""}
         id="global-header"
       >
-        <div className="w-full h-36 px-2 sm:px-6 xl:px-8 flex flex-row gap-2 justify-evenly items-center max-w-full bg-header-main">
+        <div className="w-full h-36 px-4 sm:px-6 xl:px-8 flex flex-row gap-0 sm:gap-2 sm:justify-evenly items-center max-w-full bg-header-main">
           <Link
             href="/"
             aria-label={headerData.logoAlt}
@@ -40,7 +40,7 @@ function Header({ token }: { token: AccessTokenUser | null }) {
               priority
             />
           </Link>
-          <div className="flex flex-col lg:flex-row gap-x-2 gap-y-4">
+          <div className="flex flex-col lg:flex-row gap-x-2 gap-y-4 w-3/4 sm:w-auto pl-3 sm:pl-0">
             <div
               className="flex flex-row gap-2 md:gap-4 lg:gap-6 my-auto ml-3 md:ml-10"
               id="header-search"
@@ -51,23 +51,19 @@ function Header({ token }: { token: AccessTokenUser | null }) {
                   : headerData.searchDescEN}
               </span>
               <Search
-                placeholder={
-                  siteMetadata.locale === "id-ID"
-                    ? headerData.searchPlaceholderID
-                    : headerData.searchPlaceholderEN
-                }
               />
               {/* Component list of search results. Use query const to get search query */}
             </div>
-            <div className="flex flex-row my-auto ml-auto">
+            <div className="flex flex-row my-auto lg:w-[20vw] justify-between">
               <div
-                className="px-6 border-r border-white m-auto"
+                className="m-auto"
                 id="header-cart"
               >
                 <headerData.cartIcon className="fill-white size-6" />
               </div>
+              <div className="border-r border-white h-7 my-auto" />
               <div
-                className="flex flex-row lg:flex-col 2xl:flex-row gap-4 px-4 m-auto"
+                className="flex flex-row lg:flex-col 2xl:flex-row gap-4 m-auto"
                 id="header-login-register"
               >
                 <Button

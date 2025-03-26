@@ -14,7 +14,7 @@ const popularData = {
   soldID: "Terjual",
   soldEN: "Sold",
   addID: "Tambah ke Keranjang",
-  addEN: "Add to Cart",
+  addEN: "Add Items to Cart",
   addIcon: ShoppingCart,
   addAction: (product) => {
     console.log("Add to cart!");

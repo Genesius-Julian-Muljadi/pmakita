@@ -174,14 +174,16 @@ export function ProductCard({ product }: { product: Product | null }) {
                     ? discountsData.addID
                     : discountsData.addEN
                 }
-                className="flex flex-row justify-between w-full bg-home-addToCardBg py-[0.4rem] px-4 text-white rounded-sm shadow-none hover:shadow-none"
+                className="grid w-full bg-home-addToCardBg py-[0.4rem] px-4 text-white rounded-sm shadow-none hover:shadow-none"
               >
-                <discountsData.addIcon className="size-[0.85rem] my-auto fill-white" />
-                <span className="my-auto text-nowrap font-mono normal-case text-sm font-medium">
-                  {siteMetadata.locale === "id-ID"
-                    ? discountsData.addID
-                    : discountsData.addEN}
-                </span>
+                <div className="flex flex-row gap-3 m-auto">
+                  <discountsData.addIcon className="size-[0.85rem] my-auto fill-white" />
+                  <span className="my-auto text-nowrap font-mono normal-case text-sm font-medium">
+                    {siteMetadata.locale === "id-ID"
+                      ? discountsData.addID
+                      : discountsData.addEN}
+                  </span>
+                </div>
               </Button>
             </div>
           </CardBody>

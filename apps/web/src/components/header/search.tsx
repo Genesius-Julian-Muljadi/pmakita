@@ -1,11 +1,12 @@
 "use client";
 
 import headerData from "@/data/headerData";
+import siteMetadata from "@/data/siteMetadata";
 import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { useDebouncedCallback } from "use-debounce";
 
-export default function Search({ placeholder }: { placeholder: string }) {
+export default function Search() {
   const searchParams = useSearchParams();
   const pathName = usePathname();
   const router = useRouter();
@@ -23,14 +24,30 @@ export default function Search({ placeholder }: { placeholder: string }) {
   return (
     <div
       aria-label="Search"
-      className="relative flex flex-1 flex-shrink-0 w-[55vw] min-w-[21rem] sm:min-w-96"
+      className="relative flex flex-1 flex-shrink-0 sm:w-[55vw] sm:min-w-96"
     >
       <label htmlFor="search" className="sr-only">
         Search
       </label>
       <input
-        className="peer block w-full rounded-lg border border-gray-200 bg-header-search-bg py-2 lg:py-3 pl-10 text-[0.75rem] sm:text-sm outline-2 placeholder:text-header-search-placeholder"
-        placeholder={placeholder}
+        className="hidden sm:block peer w-full rounded-lg border border-gray-200 bg-header-search-bg py-2 lg:py-3 pl-10 text-sm outline-2 placeholder:text-header-search-placeholder"
+        placeholder={
+          siteMetadata.locale === "id-ID"
+            ? headerData.searchPlaceholderID
+            : headerData.searchPlaceholderEN
+        }
+        onChange={(e) => {
+          handleSearch(e.target.value);
+        }}
+        defaultValue={searchParams.get("searchtext")?.toString()}
+      />
+      <input
+        className="block sm:hidden peer w-full rounded-lg border border-gray-200 bg-header-search-bg py-1.5 pl-10 text-[0.75rem] outline-2 placeholder:text-header-search-placeholder"
+        placeholder={
+          siteMetadata.locale === "id-ID"
+            ? headerData.searchPlaceholderSmID
+            : headerData.searchPlaceholderSmEN
+        }
         onChange={(e) => {
           handleSearch(e.target.value);
         }}
