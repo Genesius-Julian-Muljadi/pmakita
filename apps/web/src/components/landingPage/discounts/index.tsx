@@ -5,6 +5,7 @@ import Link from "@/components/Link";
 import { ChevronRightIcon } from "@heroicons/react/24/outline";
 import DiscountCarousel from "./carousel";
 import { ProductSamples } from "@/data/samples/productSamples";
+import DiscountTimer from "./timer";
 
 export default function Discounts({ products }: { products?: Array<Product> }) {
   const discountsProducts: Array<Product> = (products || ProductSamples).filter(
@@ -17,10 +18,18 @@ export default function Discounts({ products }: { products?: Array<Product> }) {
         className="flex flex-row justify-between mx-2 md:mx-4 lg:mx-6 xl:mx-8 border-b border-footer-main"
         id="home-fresh-header"
       >
-        <div className="w-56 sm:w-72 text-xl sm:text-2xl font-bold font-sans my-auto border-b-2 border-header-main py-4 translate-y-[0.1rem] text-nowrap">
-          {siteMetadata.locale === "id-ID"
-            ? discountsData.headerTitleID
-            : discountsData.headerTitleEN}
+        <div className="flex flex-row gap-0 md:gap-2 lg:gap-4">
+          <div className="w-56 sm:w-72 text-xl sm:text-2xl font-bold font-sans my-auto border-b-2 border-header-main py-4 translate-y-[0.1rem] text-nowrap">
+            {siteMetadata.locale === "id-ID"
+              ? discountsData.headerTitleID
+              : discountsData.headerTitleEN}
+          </div>
+          <DiscountTimer
+            deadline={
+              discountsData.timerDeadline ||
+              new Date("2025-04-14T21:00:00.000Z")
+            }
+          />
         </div>
         <Link
           href={discountsData.sideLinkHref || "/"}

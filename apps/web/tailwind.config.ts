@@ -35,6 +35,7 @@ const config: Config = withMT({
           carouselArrowBg: "#f2f3f5",
           stockText: "#a8acad",
           freshCardBorder: "#efefef",
+          discountTimer: "#d02424",
           discountBadge: "#e36362",
           rating: { on: "#ffb949", off: "#d5d5d5", value: "#afafaf" },
           salesProgressBar: "#1287a4",

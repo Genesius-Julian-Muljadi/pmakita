@@ -4,6 +4,11 @@ const { default: ShoppingCart } = require("@/assets/icons/shoppingCart");
 const popularData = {
   headerTitleID: "Diskon Terbaik Hari Ini",
   headerTitleEN: "Daily Discounts",
+  timerDeadline: null,
+  timerTitleID: "Berakhir dalam",
+  timerTitleEN: "Ends in",
+  timeExpiredID: "Berakhir",
+  timeExpiredEN: "Expired",
   sideLinkID: "Lihat Semua",
   sideLinkEN: "See All",
   sideLinkHref: "",
